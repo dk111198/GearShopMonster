@@ -1,0 +1,69 @@
+﻿@model GearStore.Models.Order
+
+@{
+    ViewBag.Title = "Chi tiết hoá đơn";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h3 class="card-title">Chi tiết hoá đơn</h3>
+                <p class="card-subtitle">@Html.DisplayNameFor(model => model.OrderID): @Html.DisplayFor(model => model.OrderID)</p>
+            </div>
+            <div class="card-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.OrderDate)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.OrderDate)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ShippedDate)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ShippedDate)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Status)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.IsShipped)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.IsShipped)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.IsPaid)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.IsPaid)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Customer.Username)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Customer.Username)
+                    </dd>
+                </dl>
+                <a class="btn btn-success" href="@Url.Action("Edit",new { id = Model.OrderID })">Sửa</a>
+                <a class="btn btn-outline-primary" href="javascript: window.history.back()">Quay lại</a>
+            </div>
+        </div>
+    </div>
+</div>
